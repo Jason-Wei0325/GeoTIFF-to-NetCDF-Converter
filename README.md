@@ -1,17 +1,11 @@
 # GeoTIFF-to-NetCDF-Converter
-This repository provides a Python-based workflow for converting daily GeoTIFF evapotranspiration (ET) products into yearly NetCDF files. The implementation is designed for geospatial raster time series and emphasizes correctness, performance, and compatibility with common scientific data standards.
-
-## Overview
-
-The script reads daily GeoTIFF files, groups them by year, and stacks them along a time dimension to produce one NetCDF file per year. Spatial reference information, resolution, and extent are preserved. Temporal information is derived directly from the GeoTIFF filenames using day-of-year (DOY), allowing for non-continuous time series.
+This repository provides a Python-based workflow for converting daily GeoTIFF evapotranspiration (ET) products into yearly NetCDF files.
 
 ## Input Data
 
 ### File Naming Convention
 
-Input GeoTIFF files must follow this naming pattern:
-
-YYYYDDD.tif
+Input GeoTIFF files must follow this naming pattern: YYYYDDD.tif
 
 Where:
 - `YYYY` is the four-digit year
@@ -30,9 +24,7 @@ All GeoTIFF files within the same year must share:
 
 ### NetCDF File
 
-One NetCDF file is generated per year:
-
-ET_YYYY.nc
+One NetCDF file is generated per year: ET_YYYY.nc
 
 ### Dimensions
 
